@@ -3,6 +3,156 @@
 <head>
     <title>Menu</title>
     <link rel="stylesheet" type="text/css" href="styles.css">
+
+Copilot
+
+Copilot Chat
+Login page and storage spreadsheet setup
+Generate a login page & storage spreadsheet
+Sure! I'll help you create a simple login page using HTML and JavaScript, and a storage spreadsheet using Google Sheets.
+
+1. Login Page
+Here is a basic example of an HTML login page with JavaScript for form validation:
+
+index.html
+HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+        .login-container {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .login-container h2 {
+            margin-bottom: 20px;
+        }
+        .login-container input[type="text"],
+        .login-container input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .login-container button {
+            width: 100%;
+            padding: 10px;
+            background-color: #28a745;
+            border: none;
+            color: white;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .login-container button:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <h2>Login</h2>
+        <form id="loginForm">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <button type="submit">Login</button>
+        </form>
+        <p id="errorMessage" style="color: red;"></p>
+    </div>
+
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            var username = document.getElementById('username').value;
+            var password = document.getElementById('password').value;
+
+            // Simple validation for demonstration
+            if (username === "admin" && password === "password") {
+                alert("Login successful!");
+                // Redirect to another page or perform other actions
+            } else {
+                document.getElementById('errorMessage').textContent = "Invalid username or password";
+            }
+        });
+    </script>
+</body>
+</html>
+Public code references from 18 repositories
+2. Storage Spreadsheet Using Google Sheets
+To create a storage spreadsheet, you can use Google Sheets. Here are the steps to create and share a Google Sheet:
+
+Open Google Sheets.
+Click on the + button to create a new spreadsheet.
+Name your spreadsheet (e.g., "Storage Spreadsheet").
+Add the necessary columns for your storage data. For example:
+Column A: Item ID
+Column B: Item Name
+Column C: Quantity
+Column D: Location
+Column E: Date Added
+Populate the spreadsheet with your storage data.
+To share the spreadsheet:
+
+Click the Share button in the top right corner.
+Add the email addresses of the people you want to share it with.
+Set their permission levels (Viewer, Commenter, or Editor).
+Click Send.
+This setup provides you with a simple login page and a storage spreadsheet for managing your data. Let me know if you need any further assistance!
+
+Create game 2-6 players. Eitger players can select arbiratlry player 1-6 or enter name for player in leiu. create a card game from "gameCards" a list of 24 cards from referenced corresponding photos from website repository "/image" folder each card assigned points to add or subtract from players total points.  shuffle draw game cards. when user clicks on a card frim gameCard remove card from list & go around drawing once for each player, player may opt to end game for self by selecting to draw a card from "assignmentEnd" = a 2nd stack 24 cards each card assigned points and a corresponding png file. If player total points greater than value card drawn from assignmentEnd player wins own game and each player can win own game. Rank determined by having greater points however. Game runs until all players draw from assignmentEnd or gameCards run out. Upon gameCard cards empty players remaining draw from assignmentEnd to see if game won for each player. Rank found at end save rank for player & points corresponding and send 2 spreadsheet for either arbitarary player 1-6 or named player given from games start. 
+Sure, I can help you create a simple card game for 2-6 players using HTML, CSS, and JavaScript. However, creating a fully functional game involves significant coding, especially for managing the game state, shuffling cards, handling user interactions, and generating spreadsheets. I'll guide you through the basic structure and provide you with a starting point for the game.
+
+Basic Game Structure
+HTML
+HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Card Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .player {
+            margin: 10px 0;
+        }
+        .card {
+            display: inline-block;
+            margin: 5px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        #end-game {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+
 </head>
 <body>
     <div class="menu">
