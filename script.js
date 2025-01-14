@@ -6,7 +6,7 @@ let currentPlayerIndex = 0;
 // Generate game cards
 function generateGameCards() {
     const cards = [];
-    for (let i = 1; i <= 24; i++) {
+    for (let i = 1; i <= 2; i++) {
         cards.push({
             id: i,
             points: Math.floor(Math.random() * 10) - 5,
@@ -20,7 +20,7 @@ function generateGameCards() {
 // Generate assignment end cards
 function generateAssignmentEndCards() {
     const cards = [];
-    for (let i = 1; i <= 24; i++) {
+    for (let i = 1; i <= 2; i++) {
         cards.push({
             id: i,
             points: Math.floor(Math.random() * 10),
