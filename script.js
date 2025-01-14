@@ -10,8 +10,8 @@ function generateGameCards() {
         cards.push({
             id: i,
             points: Math.floor(Math.random() * 10) - 5,
-            imageSide1: `/image/gameCards/S1/gameCard${i}.png`,
-            imageSide2: `/image/gameCards/S2/gameCard${i}.png`
+            imageSide1: `/images/gameCards/S1/gameCard${i}.png`,
+            imageSide2: `/images/gameCards/S2/gameCard${i}.png`
         });
     }
     return shuffle(cards);
